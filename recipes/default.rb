@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-%w{httpd tmux vim php} do |packages|
+%w{httpd tmux php} do |packages|
 	package packages do
 		action :install
 end
