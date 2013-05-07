@@ -7,6 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-package "tmux" do
-	action :install
+%w{httpd tmux vim php} do |packages|
+	package packages do
+		action :install
+end
+
+cookbook_file "/tmp/hoge" do
+	source "hoge"
+	mode "00644"
+	owner "root"
+	group "root"
+	action :create
 end
