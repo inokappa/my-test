@@ -2,8 +2,10 @@ require 'chefspec'
 
 describe 'my-test::default' do
 	let (:chef_run) { ChefSpec::ChefRunner.new.converge 'my-test::default' }
-	it 'should install tmux' do
-		expect(chef_run).to install_package 'tmux'
+	%w{httpd tmux vim php}.each do |packages|
+		it 'should install packages' do
+			expect(chef_run).to install_package packages
+		end
 	end
 	it 'should create /tmp/hoge' do
 		expect(chef_run).to create_cookbook_file '/tmp/hoge'
