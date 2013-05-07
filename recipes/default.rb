@@ -9,4 +9,4 @@
 #
 package "tmux" do
 	action :install
-en
+end
