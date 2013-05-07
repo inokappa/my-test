@@ -6,3 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+package "tmux" do
+	action :install
+end
