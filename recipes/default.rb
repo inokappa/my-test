@@ -10,6 +10,7 @@
 %w{httpd tmux vim php}.each do |packages|
 	package packages do
 		action :install
+	end
 end
 
 cookbook_file "/tmp/hoge" do
