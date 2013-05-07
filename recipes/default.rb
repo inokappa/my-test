@@ -17,4 +17,5 @@ cookbook_file "/tmp/hoge" do
 	mode "00644"
 	owner "root"
 	group "root"
+	action :create
 end
