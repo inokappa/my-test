@@ -1,3 +1,4 @@
+# test
 require 'chefspec'
 
 describe 'my-test::default' do
